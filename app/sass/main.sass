@@ -17,6 +17,8 @@ body,
   position: relative
   z-index: 0
 
+.chatContainer *
+  box-sizing: border-box  
 .chatContainer
   font-family: "Calibri-Regular"
   color: $main-font-color
@@ -167,6 +169,8 @@ body,
   border-top-right-radius: $main-border-radius
   border-bottom-left-radius: $main-border-radius
 
+// botBtn
+
 .botBtn
   background-color: transparent
   border: 1px solid $main-font-color
@@ -174,6 +178,7 @@ body,
   padding: 15px 40px 
   width: 100%
   cursor: pointer
+  font-size: 14px
   &:hover,
   &:focus,
   &:active
@@ -187,9 +192,13 @@ body,
   &:focus,
   &:active
     color: $main-font-color
-
     background-color: #fff
 
+.botBtn.botBtn_size_s
+  font-size: 10px
+  padding: 5px 20px
+  min-width: 60%
+  width: initial
 
 .message__body-row-btn .botBtn
   margin: 0 5px
@@ -244,12 +253,67 @@ body,
   margin-bottom: 0
 
 
+.cardSimple
+  background-color: #fff
+  border-radius: $main-border-radius
+  padding: 20px 30px
+  width: 200px
+  margin-bottom: 20px
+  display: flex
+  flex-direction: column
+  text-align: center
+  &__title
+    font-family: "Calibri-Bold"
+    font-size: 16px
+    margin-bottom: 15px
+  &__content
+    font-size: 12px
+    margin-bottom: 15px
+  &__btnBlock
+    & .botBtn
+      margin-bottom: 10px
+
+.cardSimple__btnBlock .botBtn:last-child
+  margin-bottom: 0
+
+.cardFull
+  background-color: #fff
+  border-radius: $main-border-radius
+  width: 200px
+  display: flex
+  flex-direction: column
+  text-align: center
+  padding-bottom: 30px
+  &__heroImg
+    height: 130px
+    background-color: #cccccc
+    border-top-left-radius: $main-border-radius
+    border-top-right-radius: $main-border-radius
+    margin-bottom: 20px
+  &__title
+    padding-left: 20px
+    padding-right: 20px
+    font-family: "Calibri-Bold"
+    font-size: 16px
+    margin-bottom: 20px
+  &__btnBlock
+    padding-left: 30px
+    padding-right: 30px
+    & .botBtn
+      margin-bottom: 10px
+.cardFull__btnBlock .botBtn:last-child
+  margin-bottom: 0
 
 
 
 
 
 
+
+
+
+
+  
 .poweredBlock
   color: $light-font-color
   font-family: "Poppins-Regular"
