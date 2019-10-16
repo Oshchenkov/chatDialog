@@ -19,6 +19,7 @@ body,
 
 .chatContainer
   font-family: "Calibri-Regular"
+  color: $main-font-color
   display: flex
   flex-direction: column
   justify-content: space-between
@@ -42,6 +43,8 @@ body,
     padding: 15px 30px
     background-color: #fff
     border-radius: $main-border-radius
+    box-shadow: $bx-shadow
+    position: relative
   &__closeBtn
     background-color: $main-font-color
     width: 60px
@@ -59,6 +62,9 @@ body,
     line-height: normal
     font-size: 60px
     cursor: pointer
+    &-img
+      width: 25px
+      height: 25px
 
 .chatBotLogo
   display: flex
@@ -86,7 +92,7 @@ body,
   overflow-y: auto
   overflow-x: hidden
   position: relative
-  padding-bottom: 30px
+  padding-bottom: 10px
 .chatContainer__body::-webkit-scrollbar-track
   -webkit-box-shadow: inset 0 0 6px $main-bg-color
   background-color: $main-bg-color
@@ -100,10 +106,173 @@ body,
   border-radius: 10px
 
 
+
+
+.chatContent-botRow
+  margin-bottom: 20px
+.message
+  &__head
+    display: flex
+    justify-content: flex-start
+    align-items: center
+    font-size: 12px
+    font-family: "Calibri-Regular"
+    color: $light-font-color
+    margin-bottom: 20px
+    &-icon
+      width: 30px
+      height: 30px
+      margin-right: 15px
+    &-name
+    &-time
+      margin-left: 4px
+  &__body
+    margin-bottom: 20px
+    &-row
+      margin-bottom: 10px
+      &-btn
+        display: flex
+
+
+
+.chatContent-answerRow
+.messageAnswer
+  &__head
+    display: flex
+    justify-content: flex-end
+    align-items: center
+    font-size: 12px
+    font-family: "Calibri-Regular"
+    color: $light-font-color
+    margin-bottom: 20px
+    &-icon
+      width: 30px
+      height: 30px
+      margin-left: 15px
+    &-name
+    &-time
+      margin-left: 4px
+  &__body
+    display: flex
+    justify-content: flex-end
+    align-items: center
+    &-row
+      margin-bottom: 15px
+
+.resultMsg
+  padding: 15px 40px 
+  background-color: $main-font-color
+  color: #fff
+  border-top-left-radius: $main-border-radius
+  border-top-right-radius: $main-border-radius
+  border-bottom-left-radius: $main-border-radius
+
+.botBtn
+  background-color: transparent
+  border: 1px solid $main-font-color
+  border-radius: $main-border-radius
+  padding: 15px 40px 
+  width: 100%
+  cursor: pointer
+  &:hover,
+  &:focus,
+  &:active
+    color: #fff
+    background-color: $main-font-color
+.botBtn_light
+.botBtn_dark
+  background-color: $main-font-color
+  color: #fff
+  &:hover,
+  &:focus,
+  &:active
+    color: $main-font-color
+
+    background-color: #fff
+
+
+.message__body-row-btn .botBtn
+  margin: 0 5px
+.message__body-row-btn .botBtn:first-child
+  margin-left: 0
+.message__body-row-btn .botBtn:last-child
+  margin-right: 0
+
+
+.chatItem
+  display: flex
+  justify-content: space-between
+  padding: 15px 25px
+  background-color: #fff
+  border-radius: 50px
+  box-shadow: $bx-shadow-el
+  align-items: center
+  &__infoBlock
+    &-title
+      color: $main-font-color
+      font-size: 16px
+    &-date
+      color: $light-font-color
+      font-size: 11px
+  &__priceBlock
+    display: flex
+    align-items: baseline
+    font-family: "Calibri-Bold"
+    &-cur
+      margin-right: 4px
+    &-val
+      & sup
+        font-size: 10px
+
+
+.botQuestion
+  background-color: #fff
+  border-top-left-radius: $main-border-radius
+  border-top-right-radius: $main-border-radius
+  border-bottom-right-radius: $main-border-radius
+  padding: 15px 40px
+  box-shadow: $bx-shadow-el
+  &__text
+    font-size: 14px
+
+.message__body-rowFull-btn
+  display: flex
+  flex-direction: column
+.message__body-rowFull-btn .botBtn
+  margin-bottom: 10px
+.message__body-rowFull-btn .botBtn:last-child
+  margin-bottom: 0
+
+
+
+
+
+
+
+
+.poweredBlock
+  color: $light-font-color
+  font-family: "Poppins-Regular"
+  text-decoration: none
+  font-size: 10px
+  display: flex
+  justify-content: center
+
+  //background: linear-gradient(0, rgba(249,249,249,1) 0%, rgba(255,255,255,0) 100%)
+  &__icon
+    margin-right: 15px
+    &-img
+      width: 14px
+      height: 14px
+  &__text
+
+// Footer enterMessage
+
+
 .enterMessage
   display: flex
   justify-content: space-between
-  box-shadow: $bx-shadow
+  
   &__content
     color: $light-font-color
     font-size: 14px
@@ -136,4 +305,8 @@ body,
   &__img
     width: 15px
     height: auto
+
+
+
+
 
